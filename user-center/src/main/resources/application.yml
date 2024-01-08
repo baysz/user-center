@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: user-center
+  datasource:
+    username: root
+    password: 147258369
+    url: jdbc:mysql://localhost:3306/user-center?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+
+server:
+  port: 8000
+
+#配置sql映射文件的路径
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+
+
+  #配置全局主键自增
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
